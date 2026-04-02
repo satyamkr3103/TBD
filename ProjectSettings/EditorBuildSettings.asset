@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 0
+    path: Assets/Scripts/Pixel Adventure 1/Scenes/Demo.unity
+    guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: a8800bb03c0d0244c8ea552a9aba995b
+  - enabled: 1
+    path: Assets/Scenes/Level1.unity
+    guid: 0ac9de88e21f302449b95a13544d715c
+  m_configObjects:
+    com.unity.adaptiveperformance.simulator.provider_settings: {fileID: 11400000, guid: 16acf170adb91484d9e7861be2aea345, type: 2}
