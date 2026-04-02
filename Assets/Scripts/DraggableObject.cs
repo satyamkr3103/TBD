@@ -38,18 +38,18 @@ public class DraggableObject : MonoBehaviour
         isDragging = false;
 
         if (rb != null)
-        {
             rb.bodyType = RigidbodyType2D.Static;
-        }
 
-        // Snap
-        SnapToGround snap = GetComponent<SnapToGround>();
-        if (snap != null)
-        {
-            snap.Snap();
-        }
+        // 🔥 Edge snap first
+        SnapToEdge edge = GetComponent<SnapToEdge>();
+        if (edge != null)
+            edge.Snap();
 
-        // Start lifetime
+        // 🔽 Then ground snap (fallback)
+        SnapToGround ground = GetComponent<SnapToGround>();
+        if (ground != null)
+            ground.Snap();
+
         GetComponent<BlockLifetime>().StartLifetime();
     }
     void CreateSupport()

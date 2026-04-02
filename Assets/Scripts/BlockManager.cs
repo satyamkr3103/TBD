@@ -173,6 +173,7 @@ public class BlockManager : MonoBehaviour
                 newGameObj.AddComponent<DraggableObject>();
                 newGameObj.AddComponent<BlockLifetime>();
                 newGameObj.AddComponent<SnapToGround>();
+                newGameObj.AddComponent<SnapToEdge>();
 
                 // Push object up until it's no longer inside another collider
                 NudgeOutOfOverlap(newGameObj);
@@ -265,6 +266,7 @@ public class BlockManager : MonoBehaviour
         generatedShape.AddComponent<DraggableObject>();
         generatedShape.AddComponent<BlockLifetime>();
         generatedShape.AddComponent<SnapToGround>();
+        generatedShape.AddComponent<SnapToEdge>();
 
         // Push object up until it's no longer inside another collider
         NudgeOutOfOverlap(generatedShape);
